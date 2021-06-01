@@ -1,0 +1,38 @@
+[
+  {
+    "uuid": "161eaefe-dc6a-48ca-b5c0-08136f0c302d",
+    "name": "SENSUAL_TOFU",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "ff81915b-1bb8-4fc6-bd35-460cbffb296e",
+    "name": "SnideYo",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "5a19c29e-5e2d-4b83-8bfd-48b0d5526221",
+    "name": "Erzelius",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "7836e6d4-6c8f-47e9-a263-1722b051b164",
+    "name": "UnicornAlto",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "45294351-c8ff-42e6-8890-8cd2af98d1e7",
+    "name": "Help",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "6334d5eb-525f-4218-a07d-392cad44b7c9",
+    "name": "Engingener",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

@@ -1,0 +1,12 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.5.3
+
+completed.snideyo, boolean, 00
+completed.unicornalto, boolean, 01
+score.erzelius, long, 0000000000000005
+score.snideyo, double, 4082C00000000000
+score.unicornalto, double, 4057C00000000000
+win.score, long, 0000000000000032
+

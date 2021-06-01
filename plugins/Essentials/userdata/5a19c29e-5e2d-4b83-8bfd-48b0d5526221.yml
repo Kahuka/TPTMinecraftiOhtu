@@ -1,0 +1,31 @@
+lastAccountName: Erzelius
+timestamps:
+  login: 1622497114880
+  logout: 1622509679086
+  lastteleport: 1622317007135
+ipAddress: 90.191.148.70
+lastlocation:
+  world: void
+  x: -30.616107629510807
+  y: 40.0
+  z: 11.708388365959605
+  yaw: 245.95508
+  pitch: 6.9250755
+logoutlocation:
+  world: void
+  x: -33.689910138572905
+  y: 43.18378665097854
+  z: 89.48658272072429
+  yaw: 291.11328
+  pitch: 19.825958
+afk: true
+godmode: false
+nickname: Kaur
+homes:
+  home:
+    world: dropper
+    x: 104.62832140442515
+    y: 190.0
+    z: -2.0662569771800126
+    yaw: -285.916
+    pitch: 43.19923

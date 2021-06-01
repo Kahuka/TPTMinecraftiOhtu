@@ -1,0 +1,128 @@
+options:
+	timer: 90
+
+command /dropper [<text>]:
+  permission: game.start
+  trigger:
+    if arg 1 is "round1":
+      set {win.score} to 200
+      set {_countdown} to 5
+      loop 5 times:
+        send title "&e%{_countdown}%" to all players for 1 seconds
+        remove 1 from {_countdown}
+        wait 1 second
+      loop all players:
+        set {completed.%loop-player%} to false
+        reveal players from all players
+        set flight mode of loop-player to false
+        teleport loop-player to {dropper.tp.map1}
+        set {dropper.spawn} to {dropper.tp.map1}
+      message "&6Teil on aega 2 minutit!"
+    if arg 1 is "round2":
+      set {win.score} to 200
+      set {_countdown} to 5
+      loop 5 times:
+        send title "&e%{_countdown}%" to all players for 1 seconds
+        remove 1 from {_countdown}
+        wait 1 second
+      loop all players:
+        set {completed.%loop-player%} to false
+        reveal players from all players
+        set flight mode of loop-player to false
+        teleport loop-player to {dropper.tp.map2}
+        set {dropper.spawn} to {dropper.tp.map2}
+      message "&6Teil on aega 2 minutit!"
+    if arg 1 is "round3":
+      set {win.score} to 200
+      set {_countdown} to 5
+      loop 5 times:
+        send title "&e%{_countdown}%" to all players for 1 seconds
+        remove 1 from {_countdown}
+        wait 1 second
+      loop all players:
+        set {completed.%loop-player%} to false
+        reveal players from all players
+        set flight mode of loop-player to false
+        teleport loop-player to {dropper.tp.map3}
+        set {dropper.spawn} to {dropper.tp.map3}
+      message "&6Teil on aega 2 minutit!"
+    if arg 1 is "round4":
+      set {win.score} to 200
+      set {_countdown} to 5
+      loop 5 times:
+        send title "&e%{_countdown}%" to all players for 1 seconds
+        remove 1 from {_countdown}
+        wait 1 second
+      loop all players:
+        set {completed.%loop-player%} to false
+        reveal players from all players
+        set flight mode of loop-player to false
+        teleport loop-player to {dropper.tp.map4}
+        set {dropper.spawn} to {dropper.tp.map4}
+      message "&6Teil on aega 2 minutit!"
+    if arg 1 is "round5":
+      set {win.score} to 200
+      set {_countdown} to 5
+      loop 5 times:
+        send title "&e%{_countdown}%" to all players for 1 seconds
+        remove 1 from {_countdown}
+        wait 1 second
+      loop all players:
+        set {completed.%loop-player%} to false
+        reveal players from all players
+        set flight mode of loop-player to false
+        teleport loop-player to {dropper.tp.map5}
+        set {dropper.spawn} to {dropper.tp.map5}
+      message "&6Teil on aega 2 minutit!"
+    if arg 1 is "map1":
+      set {dropper.tp.map1} to location of player
+      message "&c%{dropper.tp.map1}% spawnpoint set !"
+    if arg 1 is "map2":
+      set {dropper.tp.map2} to location of player
+      message "&c%{dropper.tp.map2}% spawnpoint set !"
+    if arg 1 is "map3":
+      set {dropper.tp.map3} to location of player
+      message "&c%{dropper.tp.map3}% spawnpoint set !"
+    if arg 1 is "map4":
+      set {dropper.tp.map4} to location of player
+      message "&c%{dropper.tp.map4}% spawnpoint set !"
+    if arg 1 is "map5":
+      set {dropper.tp.map5} to location of player
+      message "&c%{dropper.tp.map5}% spawnpoint set !"
+    if arg 1 is not set:
+      teleport player to location 0, 142, -6 in world "dropper"
+	  
+	
+	 
+on rightclick on an button:
+  if player's world is "dropper":
+    if {completed.%player%} is false:
+      broadcast "%player% finished %{place}%'st"
+      add 1 to {place}
+      set {completed.%player%} to true
+      set {score.%player%} to {score.%player%} + {win.score}
+      if {win.score} > 20:
+        remove 20 from {win.score}
+        hide player from all players
+        set player's flight mode to true
+      else:
+        hide player from all players
+        set player's flight mode to true
+on damage of a player:
+  if victim is in "dropper":
+    cancel event
+    teleport the victim to {dropper.spawn}
+	
+command /droptimer:
+  permission: game.start
+  trigger:
+    set {place} to 1
+    wait {@timer} seconds
+    broadcast "&630 sekundit jäänud!"
+    wait 20 seconds
+    broadcast "&610 sekundit jäänud!"
+    wait 10 seconds
+    broadcast "&6AEG ON LÄBI!"
+    set {place} to 1
+    loop all players:
+      set {completed.%loop-player%} to true

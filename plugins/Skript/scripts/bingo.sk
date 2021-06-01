@@ -1,0 +1,63 @@
+on inventory click:
+	if player's world is "pingo":
+		if event-item is cake:
+			if {bingo.1} is true:
+			message "You got cake"
+			set {bingo.1} to false
+		if event-item is cake:
+			if {bingo.2} is true:
+			message "You got cake"
+			set {bingo.2} to false
+		if event-item is compass:
+			if {bingo.3} is true:
+			message "You got a compass"
+			set {bingo.3} to false
+		if event-item is cake:
+			if {bingo.4} is true:
+			message "You got cake"
+			set {bingo.4} to false
+		
+command /bingo [<text>]:
+	trigger:
+		if arg 1 is "start":
+			loop all players:
+			teleport player to location -166, 105, -361 in world "pingo"
+			set {bingo.1} to true
+			set {bingo.2} to true
+			set {bingo.3} to true
+			set {bingo.4} to true
+			set {bingo.5} to true
+			set {bingo.6} to true
+			set {bingo.7} to true
+			set {bingo.8} to true
+		if arg 1 is "stop":
+			set {bingo.1} to false
+			set {bingo.2} to false
+			set {bingo.3} to false
+			set {bingo.4} to false
+			set {bingo.5} to false
+			set {bingo.6} to false
+			set {bingo.7} to false
+			set {bingo.8} to false
+			
+
+command /bingolist :
+  trigger:
+    set {bingo} to true
+    if {bingo} is true:
+      message "Teil on vaja leida veel:"
+      if {bingo.1} is true:
+        message "Kook"
+      if {bingo.2} is true:
+        message "tükk arbuusi"
+      if {bingo.3} is true:
+        message "kompass"
+      if {bingo.4} is true:
+        message "roosa wool"
+      if {bingo.5} is true:
+        message "Clown fish"
+      if {bingo.6} is true:
+        message "Minecart with chest"
+	  
+	  
+	  

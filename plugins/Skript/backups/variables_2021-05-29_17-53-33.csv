@@ -1,0 +1,19 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.5.3
+
+completed.erzelius, boolean, 01
+completed.snideyo, boolean, 00
+completed.unicornalto, boolean, 00
+dropper.spawn, location, 8605776F726C6480FF0000000181046E616D6520800764726F7070657201780900000000000000000179094061C00000000000017A09C026000000000000057069746368080000000003796177084231AE33
+ema, string, 80026A61
+ema.1, string, 80026A61
+onu, long, 0000000000000001
+score.erzelius, double, 407F900000000000
+score.snideyo, double, 4082C00000000000
+score.unicornalto, double, 4072200000000000
+tntrun, boolean, 01
+tntrun.erzelius, boolean, 01
+win.score, long, 000000000000002D
+

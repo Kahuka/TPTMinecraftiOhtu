@@ -1,0 +1,30 @@
+lastAccountName: UnicornAlto
+timestamps:
+  login: 1622492032564
+  logout: 1622497105889
+  lastteleport: 1622492048920
+ipAddress: 88.196.23.32
+logoutlocation:
+  world: Pingo
+  x: -162.64060771733668
+  y: 103.0
+  z: -363.6559409827317
+  yaw: -202.26562
+  pitch: 23.275814
+afk: false
+lastlocation:
+  world: tntrun
+  x: -20.307249789426535
+  y: 75.36723564689812
+  z: 98.41638486334743
+  yaw: -84.39836
+  pitch: 25.73694
+powertools: {}
+homes:
+  home:
+    world: dropper
+    x: 42.44033248384724
+    y: 142.0
+    z: 3.4101690190259584
+    yaw: 165.52357
+    pitch: 79.108025

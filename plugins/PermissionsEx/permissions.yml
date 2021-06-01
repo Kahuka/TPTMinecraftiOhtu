@@ -1,0 +1,51 @@
+groups:
+  default:
+    options:
+      default: true
+    permissions: []
+  Peakorraldaja:
+    permissions:
+    - '*'
+  Ehitaja:
+    permissions:
+    - essentials.tp.*
+    - essentials.tp
+    - essentials.build.*
+    - multiverse.*
+    - modifyworld.*
+    - worldedit.*
+    - essentials.gamemode.*
+  temp: {}
+  Programmeerija:
+    permissions:
+    - '*'
+  Peaprogrammeerija:
+    permissions:
+    - '*'
+  darkred: {}
+  yellow: {}
+  darkgreen: {}
+  aqua: {}
+  darkblue: {}
+  lightpurple: {}
+  darkpurple: {}
+schema-version: 1
+users:
+  7836e6d4-6c8f-47e9-a263-1722b051b164:
+    permissions:
+    - '*'
+    options:
+      name: UnicornAlto
+    group:
+    - Peakorraldaja
+  5a19c29e-5e2d-4b83-8bfd-48b0d5526221:
+    group:
+    - Peaprogrammeerija
+    options:
+      name: Erzelius
+    permissions: []
+  ff81915b-1bb8-4fc6-bd35-460cbffb296e:
+    group:
+    - Ehitaja
+    options:
+      name: SnideYo

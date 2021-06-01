@@ -1,0 +1,33 @@
+on death of player:
+	broadcast "Haha %entity% ded"
+
+on right click with wooden hoe:
+	make the player shoot a sheep at speed 7
+	set the name of the last shot sheep to "jeb_"
+	
+command /test [<player>]:
+  trigger:
+    hide arg-1 from all players
+
+command /test2 [<player>]:
+  trigger:
+    reveal arg-1 from all players
+	
+on join:
+  send title "TITLE" with subtitle "SUBTITLE" to player for 5 seconds
+
+command /send [<text>]:
+  trigger:
+    send title "%arg-1%" to all players for 1 seconds
+
+command /testt:
+  trigger: 
+    set {onu} to 1
+    set {ema} to "ja"
+    broadcast "%{ema.onu}%"
+	
+command /showplayers:
+  permission: game-start
+  trigger:
+    loop all players:
+      reveal players from all players

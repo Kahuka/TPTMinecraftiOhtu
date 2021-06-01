@@ -1,0 +1,24 @@
+command /score [<player>]:
+	permission: score.view
+	trigger:
+		if arg 1 is not set:
+			message "Your score is %{score.%player%}%"
+		if arg is set:
+			message "%arg 1%'s score is %{score.%arg-1%}%"
+
+command /setscore [<player>] [<text>]:
+  permission: score.setpoints
+  trigger:
+    if arg 1 is not set:
+      set {score.%player%} to arg-2
+      message "&eYour score has been set to %arg-2%"
+    if arg 1 is set:
+      set {score.%arg-1%} to arg-2
+      message "&e%arg-1%&e's score has been set to %arg-2%"
+    if arg 2 is not set:
+      message "&4&l/setpoints (playername) (score)"
+	  
+command /addscore:
+  trigger:
+    set {score.%player%} to {score.%player%} + 10
+    message "your score is now %{score.%player%}%"

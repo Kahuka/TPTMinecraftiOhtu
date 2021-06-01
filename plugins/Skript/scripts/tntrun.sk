@@ -1,0 +1,70 @@
+options:
+	regen: 30
+command /playeramount [<text>]:
+	permission: game.start
+	trigger:
+		set {player.amount} to arg-1
+		message "player amount has been set to %{player.amount}%"
+
+on damage of a player:
+	if damage cause is void:
+		cancel event
+		set {tntrun.%victim%} to false
+		teleport victim to {tntrun.tp.spawn}
+		set {score.%victim%} to {score.%victim%} + {points.score}
+		broadcast "%victim% on %{player.amount}% koht"
+		remove 1 from {player.amount}
+		add 10 to {points.score}
+
+on walk on white wool:
+	if {tntrun} is true:
+		if {tntrun.%player%} is true:
+			if player is in the world "tntrun":
+				wait 8 tick
+				set event-block to air
+
+command /tntrun [<text>]:
+	trigger:
+		if arg 1 is "join":
+			loop all players:
+				if {tntrun.%loop-player%} is false:
+					set {tntrun.%loop-player%} to true
+					teleport loop-player to {tntrun.tp.arene}
+		if arg 1 is "start":
+			if player have the permission "tntrun.op":
+				if {tntrun} is true:
+					message "Mäng käib !"
+				else:
+					broadcast "&6TNTRun starts in 10 seconds!"
+					wait 5 seconds
+					broadcast "&6TNTRun starts in 5 seconds!"
+					wait 1 second
+					broadcast "&6TNTRun starts in 4 seconds!"
+					wait 1 second
+					broadcast "&6TNTRun starts in 3 seconds!"
+					wait 1 second
+					broadcast "&6TNTRun starts in 2 seconds!"
+					wait 1 second
+					broadcast "&6TNTRun starts in 1 seconds!"
+					wait 1 second
+					broadcast "&6TNTRun STARTS !"
+					set {tntrun} to true
+					set {points.score} to 20
+		if arg 1 is "stop":
+			if player have the permission "tntrun.op":
+				if {tntrun} is not set:
+					message "Mang ei kai !"
+				else:
+					loop all players:
+						if {tntrun.%loop-player%} is true:
+							teleport loop-player to {tntrun.tp.spawn}
+							set {tntrun} to false
+							set {tntrun.%loop-player%} to false
+			else:
+		if arg 1 is "arene":
+			set {tntrun.tp.arene} to location of player
+			set {tntrun.tp.arene} to location of player
+			message "&c%{tntrun.tp.arene}% arna spawn !"
+		if arg 1 is "spawn":
+			set {tntrun.tp.spawn} to location of player
+			message "&c%{tntrun.tp.spawn}% world spawn !"
